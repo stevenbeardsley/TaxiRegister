@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Driver{
     private String first_name;
     private String last_name;
@@ -5,7 +7,7 @@ public class Driver{
     private int age;
     private Boolean license;
     private int phoneNumber;
-    private Vehicle[] VehicleList;
+    private ArrayList<Vehicle> VehicleList = new ArrayList<>();
     Driver(){
         return;
     }
@@ -30,9 +32,9 @@ public class Driver{
         VehicleList.add(v);
     }
     public void ShowVehicles(){
-        for (int i = 0; i < VehicleList.length; i++ ){
+        for (int i = 0; i < VehicleList.size(); i++ ){
 
-            System.out.println("Car " + i + ". :"+ VehicleList[i].GetReg());
+            System.out.println("Car " + i + ". :"+ VehicleList.get(i).GetReg());
         }
         
     }
