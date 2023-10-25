@@ -24,17 +24,22 @@ public class TaxiRegister {
         System.out.println("DRIVER OPTIONS");
         System.out.println("1. Add Vehicle");
         System.out.println("2. Edit Vehicle");
-        System.out.println("View vehicle");
+        System.out.println("3. View vehicle");
         Scanner scanner  = new Scanner (System.in);
         String choice = scanner.nextLine();
-        if (choice =="1"){
+        if (choice =="1"){//Add Vehicle
             Vehicle vehicle = new Vehicle();
             vehicle.AddDetails();
+            driver.addVehicle(vehicle);
+            DisplayDriverMenu();
         }
-        if (choice =="2"){
-            driver.ShowCars();
-            String username = scanner.nextLine();
+        if (choice =="2"){//Edit Vehicle
+            driver.ShowVehicles();
+            //Select vehicle
+            //Vehicle.set_____
+            
         }
+
     }   
 
         public void Login(){
@@ -42,11 +47,11 @@ public class TaxiRegister {
         }
 
         public void Register(){
+            //Create new Driver object 
+            //Enter new driver into db 
             return;
         }
-        public void AddVehicle(){
-            ;
-        }
+
 
 
 }
